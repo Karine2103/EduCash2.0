@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EducaCash - TEEN</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/homepageTEEN.css">
+  
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <button id="menu-btn" class="icon-btn" aria-label="Abrir menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <a class="brand" href="home.html" aria-label="EducaCash home">
+        <i class="fa-solid fa-piggy-bank"></i>
+        EducaCash
+      </a>
+
+      <div class="search-wrap" aria-hidden="false">
+        <input id="search" type="search" placeholder="Buscar módulos..." aria-label="Pesquisar módulos">
+        <button class="icon-btn" aria-label="Pesquisar">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+
+      <div class="header-actions">
+        <button id="user-btn" class="avatar-btn" aria-haspopup="dialog" aria-controls="profile-popup">
+          <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80" alt="Perfil" class="avatar">
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="main" role="main">
+    
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="blob" aria-hidden="true"></div>
+      <div class="hero-content">
+        <h1>Seu futuro financeiro começa agora.</h1>
+        <p>Guarde, aprenda, conquiste! – pensado para jovens.</p>
+      </div>
+    </section>
+
+    <!-- COFRINHO SECTION -->
+    <section class="cofrinho">
+      <h2 class="section-title">Cofrinho</h2>
+
+      <div class="cofrinhos-grid" id="cofrinhos-grid">
+        <!-- Cofrinhos serão carregados dinamicamente aqui -->
+      </div>
+
+      <div class="add-cofrinho-btn" id="add-cofrinho-btn">
+        <i class="fa-solid fa-plus"></i>
+        <span>Adicionar Cofrinho</span>
+      </div>
+    </section>
+
+    <!-- VIDEOS SECTION -->
+    <section class="videos">
+      <h2 class="section-title">Área Educa</h2>
+
+      <div class="grid">
+        <!-- Vídeo 1 -->
+        <article class="video-card">
+          <div class="video-thumb">
+            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=500&q=80" alt="Controle de gastos">
+            <div class="video-play">
+              <i class="fa-solid fa-play"></i>
+            </div>
+          </div>
+          <h3 class="video-title">CONTROLE OS SEUS GASTOS ASSIM E DEIXE DE SER POBRE</h3>
+          <p class="video-desc">Aprenda técnicas simples para controlar seus gastos e melhorar sua saúde financeira.</p>
+          <div class="video-footer">
+            <a href="#" class="btn small primary">Assistir vídeo</a>
+            <span class="video-duration">12:34</span>
+          </div>
+        </article>
+
+        <!-- Vídeo 2 -->
+        <article class="video-card">
+          <div class="video-thumb">
+            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=500&q=80" alt="Organização financeira">
+            <div class="video-play">
+              <i class="fa-solid fa-play"></i>
+            </div>
+          </div>
+          <h3 class="video-title">COMO ORGANIZAR SUAS FINANÇAS E GUARDAR DINHEIRO</h3>
+          <p class="video-desc">Planejamento financeiro FÁCIL para adolescentes.</p>
+          <div class="video-footer">
+            <a href="#" class="btn small primary">Assistir vídeo</a>
+            <span class="video-duration">15:22</span>
+          </div>
+        </article>
+
+        <!-- Vídeo 3 -->
+        <article class="video-card">
+          <div class="video-thumb">
+            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=500&q=80" alt="Economizar dinheiro">
+            <div class="video-play">
+              <i class="fa-solid fa-play"></i>
+            </div>
+          </div>
+          <h3 class="video-title">NÃO GASTE NADA ANTES DE VER ESSE VÍDEO</h3>
+          <p class="video-desc">7 DICAS PARA QUEM GANHA POUCO ECONOMIZAR DINHEIRO.</p>
+          <div class="video-footer">
+            <a href="#" class="btn small primary">Assistir vídeo</a>
+            <span class="video-duration">18:05</span>
+          </div>
+        </article>
+
+        <!-- Vídeo 4 -->
+        <article class="video-card">
+          <div class="video-thumb">
+            <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=500&q=80" alt="Educação financeira">
+            <div class="video-play">
+              <i class="fa-solid fa-play"></i>
+            </div>
+          </div>
+          <h3 class="video-title">COMO O DINHEIRO FUNCIONA</h3>
+          <p class="video-desc">SEM EDUCAÇÃO FINANCEIRA VS COM EDUCAÇÃO FINANCEIRA.</p>
+          <div class="video-footer">
+            <a href="#" class="btn small primary">Assistir vídeo</a>
+            <span class="video-duration">22:15</span>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODAL PARA CRIAR COFRINHO -->
+  <div class="modal" id="create-cofrinho-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Criar Cofrinho</h3>
+        <button class="close-modal" id="close-create-cofrinho-modal">&times;</button>
+      </div>
+      <form id="create-cofrinho-form">
+        <div class="form-group">
+          <label for="cofrinho-name">Nome do Cofrinho</label>
+          <input type="text" id="cofrinho-name" class="form-control" placeholder="Ex: Videogame novo" required>
+        </div>
+        
+        <div class="form-group">
+          <label>Ícone</label>
+          <div class="icon-selector" id="icon-selector">
+            <div class="icon-option selected" data-icon="piggy-bank"><i class="fa-solid fa-piggy-bank"></i></div>
+            <div class="icon-option" data-icon="gamepad"><i class="fa-solid fa-gamepad"></i></div>
+            <div class="icon-option" data-icon="tshirt"><i class="fa-solid fa-tshirt"></i></div>
+            <div class="icon-option" data-icon="book"><i class="fa-solid fa-book"></i></div>
+            <div class="icon-option" data-icon="car"><i class="fa-solid fa-car"></i></div>
+            <div class="icon-option" data-icon="graduation-cap"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="icon-option" data-icon="mobile"><i class="fa-solid fa-mobile"></i></div>
+            <div class="icon-option" data-icon="plane"><i class="fa-solid fa-plane"></i></div>
+            <div class="icon-option" data-icon="gift"><i class="fa-solid fa-gift"></i></div>
+            <div class="icon-option" data-icon="heart"><i class="fa-solid fa-heart"></i></div>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label>Cor</label>
+          <div class="color-selector" id="color-selector">
+            <div class="color-option selected" style="background-color: #5EC57E;" data-color="#5EC57E"></div>
+            <div class="color-option" style="background-color: #4A6CF7;" data-color="#4A6CF7"></div>
+            <div class="color-option" style="background-color: #FF9F43;" data-color="#FF9F43"></div>
+            <div class="color-option" style="background-color: #ee2828;" data-color="#ee2828"></div>
+            <div class="color-option" style="background-color: #845EF7;" data-color="#845EF7"></div>
+            <div class="color-option" style="background-color: #ffe70f;" data-color="#ffe70f"></div>
+            <div class="color-option" style="background-color: #ff0890;" data-color="#ff0890"></div>
+            <div class="color-option" style="background-color: #31f5db;" data-color="#31f5db"></div>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="cofrinho-goal">Meta (opcional)</label>
+          <input type="number" id="cofrinho-goal" class="form-control" placeholder="R$ 0,00" step="0.01">
+        </div>
+        
+        <div class="form-actions">
+          <button type="button" class="btn" id="cancel-create-cofrinho">Cancelar</button>
+          <button type="submit" class="btn primary">Criar Cofrinho</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL PARA VER/EDITAR COFRINHO -->
+  <div class="modal cofrinho-detail-modal" id="cofrinho-detail-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Detalhes do Cofrinho</h3>
+        <button class="close-modal" id="close-cofrinho-detail-modal">&times;</button>
+      </div>
+      
+      <div class="cofrinho-detail-header">
+        <div class="cofrinho-detail-icon" id="detail-cofrinho-icon">
+          <i class="fa-solid fa-piggy-bank"></i>
+        </div>
+        <div class="cofrinho-detail-info">
+          <h4 class="cofrinho-detail-name" id="detail-cofrinho-name">Cofrinho</h4>
+          <p class="cofrinho-detail-meta" id="detail-cofrinho-meta">Criado em 15/08/2023</p>
+        </div>
+      </div>
+      
+      <div class="cofrinho-detail-amount" id="detail-cofrinho-amount">R$ 0,00</div>
+      
+      <div class="cofrinho-detail-progress" id="detail-cofrinho-progress">
+        <div class="cofrinho-detail-progress-bar" id="detail-cofrinho-progress-bar"></div>
+      </div>
+      
+      <div class="cofrinho-detail-goal" id="detail-cofrinho-goal">Meta: R$ 0,00</div>
+      
+      <div class="add-deposit-form">
+        <form id="add-deposit-form">
+          <div class="form-group">
+            <label for="deposit-amount">Adicionar valor</label>
+            <input type="number" id="deposit-amount" class="form-control" placeholder="R$ 0,00" step="0.01" required>
+          </div>
+          <button type="submit" class="btn primary full">Adicionar</button>
+        </form>
+      </div>
+      
+      <h4>Histórico de Depósitos</h4>
+      <div class="deposits-list" id="deposits-list">
+        <!-- Depósitos serão carregados aqui -->
+      </div>
+      
+      <div class="form-actions">
+        <button class="btn" id="edit-cofrinho-btn">Editar Cofrinho</button>
+        <button class="btn" id="delete-cofrinho-btn">Excluir Cofrinho</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- RODAPÉ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-brand">
+            <i class="fa-solid fa-piggy-bank"></i>
+            <span>EducaCash</span>
+          </div>
+          <p class="footer-description">
+            Educação financeira para sua independência. 
+            Ferramentas e conteúdos para você tomar controle da sua vida financeira.
+          </p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Produtos</h3>
+          <ul class="footer-links">
+            <li><a href="#">Planilhas Financeiras</a></li>
+            <li><a href="#">Cofrinhos Digitais</a></li>
+            <li><a href="#">Conteúdo Educativo</a></li>
+            <li><a href="#">Relatórios Personalizados</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Recursos</h3>
+          <ul class="footer-links">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Tutoriais</a></li>
+            <li><a href="#">Perguntas Frequentes</a></li>
+            <li><a href="#">Suporte</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Legal</h3>
+          <ul class="footer-links">
+            <li><a href="#">Termos de Uso</a></li>
+            <li><a href="#">Política de Privacidade</a></li>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">Acessibilidade</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Contato</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-envelope"></i> contato@educacash.com</li>
+            <li><i class="fas fa-phone"></i> (11) 99999-9999</li>
+            <li><i class="fas fa-map-marker-alt"></i> São Paulo, Brasil</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>&copy; 2025 EducaCash. Todos os direitos reservados.</p>
+          <div class="footer-badges">
+            <span class="badge">✓ 100% Seguro</span>
+            <span class="badge">✓ SSL Protegido</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    // Sistema de Cofrinhos - Frontend
+    document.addEventListener('DOMContentLoaded', function() {
+      // Elementos do DOM
+      const cofrinhosGrid = document.getElementById('cofrinhos-grid');
+      const addCofrinhoBtn = document.getElementById('add-cofrinho-btn');
+      const createCofrinhoModal = document.getElementById('create-cofrinho-modal');
+      const closeCreateCofrinhoModal = document.getElementById('close-create-cofrinho-modal');
+      const cancelCreateCofrinho = document.getElementById('cancel-create-cofrinho');
+      const createCofrinhoForm = document.getElementById('create-cofrinho-form');
+      const cofrinhoDetailModal = document.getElementById('cofrinho-detail-modal');
+      const closeCofrinhoDetailModal = document.getElementById('close-cofrinho-detail-modal');
+      const addDepositForm = document.getElementById('add-deposit-form');
+      const editCofrinhoBtn = document.getElementById('edit-cofrinho-btn');
+      const deleteCofrinhoBtn = document.getElementById('delete-cofrinho-btn');
+      
+      // Variáveis de estado
+      let cofrinhos = JSON.parse(localStorage.getItem('cofrinhos')) || [];
+      let currentCofrinhoId = null;
+      let selectedIcon = 'piggy-bank';
+      let selectedColor = '#5EC57E';
+      
+      // Inicialização
+      renderCofrinhos();
+      
+      // Event Listeners
+      addCofrinhoBtn.addEventListener('click', openCreateCofrinhoModal);
+      closeCreateCofrinhoModal.addEventListener('click', closeCreateCofrinhoModalFunc);
+      cancelCreateCofrinho.addEventListener('click', closeCreateCofrinhoModalFunc);
+      createCofrinhoForm.addEventListener('submit', handleCreateCofrinho);
+      closeCofrinhoDetailModal.addEventListener('click', closeCofrinhoDetailModalFunc);
+      addDepositForm.addEventListener('submit', handleAddDeposit);
+      editCofrinhoBtn.addEventListener('click', handleEditCofrinho);
+      deleteCofrinhoBtn.addEventListener('click', handleDeleteCofrinho);
+      
+      // Configurar seletores de ícone e cor
+      setupIconSelector();
+      setupColorSelector();
+      
+      // Funções
+      function openCreateCofrinhoModal() {
+        createCofrinhoModal.classList.add('active');
+      }
+      
+      function closeCreateCofrinhoModalFunc() {
+        createCofrinhoModal.classList.remove('active');
+        createCofrinhoForm.reset();
+        // Reset para valores padrão
+        selectedIcon = 'piggy-bank';
+        selectedColor = '#5EC57E';
+        updateIconSelector();
+        updateColorSelector();
+      }
+      
+      function closeCofrinhoDetailModalFunc() {
+        cofrinhoDetailModal.classList.remove('active');
+        currentCofrinhoId = null;
+      }
+      
+      function setupIconSelector() {
+        const iconOptions = document.querySelectorAll('.icon-option');
+        iconOptions.forEach(option => {
+          option.addEventListener('click', function() {
+            selectedIcon = this.getAttribute('data-icon');
+            updateIconSelector();
+          });
+        });
+      }
+      
+      function updateIconSelector() {
+        const iconOptions = document.querySelectorAll('.icon-option');
+        iconOptions.forEach(option => {
+          if (option.getAttribute('data-icon') === selectedIcon) {
+            option.classList.add('selected');
+          } else {
+            option.classList.remove('selected');
+          }
+        });
+      }
+      
+      function setupColorSelector() {
+        const colorOptions = document.querySelectorAll('.color-option');
+        colorOptions.forEach(option => {
+          option.addEventListener('click', function() {
+            selectedColor = this.getAttribute('data-color');
+            updateColorSelector();
+          });
+        });
+      }
+      
+      function updateColorSelector() {
+        const colorOptions = document.querySelectorAll('.color-option');
+        colorOptions.forEach(option => {
+          if (option.getAttribute('data-color') === selectedColor) {
+            option.classList.add('selected');
+          } else {
+            option.classList.remove('selected');
+          }
+        });
+      }
+      
+      function handleCreateCofrinho(e) {
+        e.preventDefault();
+        
+        const name = document.getElementById('cofrinho-name').value;
+        const goal = document.getElementById('cofrinho-goal').value || null;
+        
+        const newCofrinho = {
+          id: Date.now().toString(),
+          name,
+          icon: selectedIcon,
+          color: selectedColor,
+          goal: goal ? parseFloat(goal) : null,
+          deposits: [],
+          createdAt: new Date().toISOString()
+        };
+        
+        cofrinhos.push(newCofrinho);
+        saveCofrinhos();
+        renderCofrinhos();
+        closeCreateCofrinhoModalFunc();
+      }
+      
+      function openCofrinhoDetail(cofrinhoId) {
+        const cofrinho = cofrinhos.find(c => c.id === cofrinhoId);
+        if (!cofrinho) return;
+        
+        currentCofrinhoId = cofrinhoId;
+        
+        // Atualizar informações do cofrinho no modal
+        document.getElementById('detail-cofrinho-icon').innerHTML = `<i class="fa-solid fa-${cofrinho.icon}"></i>`;
+        document.getElementById('detail-cofrinho-icon').style.backgroundColor = cofrinho.color;
+        document.getElementById('detail-cofrinho-name').textContent = cofrinho.name;
+        
+        const createdDate = new Date(cofrinho.createdAt);
+        document.getElementById('detail-cofrinho-meta').textContent = `Criado em ${createdDate.toLocaleDateString('pt-BR')}`;
+        
+        const total = cofrinho.deposits.reduce((sum, deposit) => sum + deposit.amount, 0);
+        document.getElementById('detail-cofrinho-amount').textContent = `R$ ${total.toFixed(2)}`;
+        
+        if (cofrinho.goal) {
+          const progress = (total / cofrinho.goal) * 100;
+          document.getElementById('detail-cofrinho-progress-bar').style.width = `${Math.min(progress, 100)}%`;
+          document.getElementById('detail-cofrinho-goal').textContent = `Meta: R$ ${cofrinho.goal.toFixed(2)}`;
+          document.getElementById('detail-cofrinho-goal').style.display = 'block';
+        } else {
+          document.getElementById('detail-cofrinho-progress-bar').style.width = '0%';
+          document.getElementById('detail-cofrinho-goal').style.display = 'none';
+        }
+        
+        // Atualizar lista de depósitos
+        renderDeposits(cofrinho.deposits);
+        
+        cofrinhoDetailModal.classList.add('active');
+      }
+      
+      function handleAddDeposit(e) {
+        e.preventDefault();
+        
+        const amount = parseFloat(document.getElementById('deposit-amount').value);
+        if (!amount || amount <= 0) return;
+        
+        const cofrinho = cofrinhos.find(c => c.id === currentCofrinhoId);
+        if (!cofrinho) return;
+        
+        const newDeposit = {
+          id: Date.now().toString(),
+          amount,
+          date: new Date().toISOString()
+        };
+        
+        cofrinho.deposits.push(newDeposit);
+        saveCofrinhos();
+        openCofrinhoDetail(currentCofrinhoId); // Recarregar o modal
+        document.getElementById('deposit-amount').value = '';
+      }
+      
+      function handleEditCofrinho() {
+        // Implementar edição do cofrinho
+        alert('Funcionalidade de edição em desenvolvimento!');
+      }
+      
+      function handleDeleteCofrinho() {
+        if (!confirm('Tem certeza que deseja excluir este cofrinho?')) return;
+        
+        cofrinhos = cofrinhos.filter(c => c.id !== currentCofrinhoId);
+        saveCofrinhos();
+        renderCofrinhos();
+        closeCofrinhoDetailModalFunc();
+      }
+      
+      function deleteDeposit(depositId) {
+        const cofrinho = cofrinhos.find(c => c.id === currentCofrinhoId);
+        if (!cofrinho) return;
+        
+        cofrinho.deposits = cofrinho.deposits.filter(d => d.id !== depositId);
+        saveCofrinhos();
+        openCofrinhoDetail(currentCofrinhoId); // Recarregar o modal
+      }
+      
+      function renderCofrinhos() {
+        cofrinhosGrid.innerHTML = '';
+        
+        if (cofrinhos.length === 0) {
+          cofrinhosGrid.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: var(--muted);">Nenhum cofrinho criado ainda.</p>';
+          return;
+        }
+        
+        cofrinhos.forEach(cofrinho => {
+          const total = cofrinho.deposits.reduce((sum, deposit) => sum + deposit.amount, 0);
+          const progress = cofrinho.goal ? (total / cofrinho.goal) * 100 : 0;
+          
+          const cofrinhoCard = document.createElement('div');
+          cofrinhoCard.className = 'cofrinho-card';
+          cofrinhoCard.style.borderLeftColor = cofrinho.color;
+          cofrinhoCard.addEventListener('click', () => openCofrinhoDetail(cofrinho.id));
+          
+          cofrinhoCard.innerHTML = `
+            <div class="cofrinho-header">
+              <div class="cofrinho-icon" style="background-color: ${cofrinho.color}">
+                <i class="fa-solid fa-${cofrinho.icon}"></i>
+              </div>
+              <div class="cofrinho-info">
+                <div class="cofrinho-name">${cofrinho.name}</div>
+                <div class="cofrinho-meta">${cofrinho.deposits.length} depósitos</div>
+              </div>
+            </div>
+            <div class="cofrinho-amount">R$ ${total.toFixed(2)}</div>
+            ${cofrinho.goal ? `
+              <div class="cofrinho-progress">
+                <div class="cofrinho-progress-bar" style="width: ${Math.min(progress, 100)}%"></div>
+              </div>
+              <div class="cofrinho-goal">Meta: R$ ${cofrinho.goal.toFixed(2)}</div>
+            ` : ''}
+          `;
+          
+          cofrinhosGrid.appendChild(cofrinhoCard);
+        });
+      }
+      
+      function renderDeposits(deposits) {
+        const depositsList = document.getElementById('deposits-list');
+        depositsList.innerHTML = '';
+        
+        if (deposits.length === 0) {
+          depositsList.innerHTML = '<p style="text-align: center; color: var(--muted); padding: 2rem;">Nenhum depósito realizado ainda.</p>';
+          return;
+        }
+        
+        // Ordenar depósitos por data (mais recentes primeiro)
+        const sortedDeposits = [...deposits].sort((a, b) => new Date(b.date) - new Date(a.date));
+        
+        sortedDeposits.forEach(deposit => {
+          const depositDate = new Date(deposit.date);
+          const depositItem = document.createElement('div');
+          depositItem.className = 'deposit-item';
+          
+          depositItem.innerHTML = `
+            <div class="deposit-info">
+              <div class="deposit-amount">R$ ${deposit.amount.toFixed(2)}</div>
+              <div class="deposit-date">${depositDate.toLocaleDateString('pt-BR')} às ${depositDate.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })}</div>
+            </div>
+            <div class="deposit-actions">
+              <button class="btn-icon" onclick="deleteDeposit('${deposit.id}')">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </div>
+          `;
+          
+          depositsList.appendChild(depositItem);
+        });
+      }
+      
+      function saveCofrinhos() {
+        localStorage.setItem('cofrinhos', JSON.stringify(cofrinhos));
+      }
+      
+      window.deleteDeposit = deleteDeposit;
+    });
+  </script>
+</body>
+</html>

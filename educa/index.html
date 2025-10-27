@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EducaCash Kids</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/homepage.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <button id="menu-btn" class="icon-btn" aria-label="Abrir menu" type="button"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
+      <div id="nav_logo"><i class="fa-solid fa-piggy-bank"></i> EducaCash </div>
+      <a class="brand" href="home.html" aria-label="EducaCash home">
+
+      </a>
+
+      <form class="search-wrap" action="search.html" method="get" aria-hidden="false" role="search">
+        <input id="search" name="q" type="search" placeholder="Buscar módulos..." aria-label="Pesquisar módulos">
+        <button class="icon-btn" aria-label="Pesquisar" type="submit"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></button>
+      </form>
+
+      <div class="header-actions">
+        <button id="user-btn" class="avatar-btn" aria-haspopup="dialog" aria-controls="profile-popup" type="button">
+          <img src="images/perfilla.PNG" alt="Perfil" class="avatar">
+        </button>
+      </div>
+    </div>
+  </header>
+
+
+  <aside id="side" class="side-panel" aria-hidden="true" aria-label="Painel lateral">
+    <button id="close-side" class="close-side" aria-label="Fechar menu" type="button"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+
+    <nav class="kid-nav" role="navigation" aria-label="Navegação principal">
+      <a href="home.html"><i class="fa-solid fa-house" aria-hidden="true"></i><span>Início</span></a>
+      <a href="about.html"><i class="fa-solid fa-book" aria-hidden="true"></i><span>Sobre</span></a>
+      <a href="courses.html"><i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i><span>Módulos</span></a>
+      <a href="contact.html"><i class="fa-solid fa-headset" aria-hidden="true"></i><span>Fale Conosco</span></a>
+    </nav>
+
+    <div class="side-footer">
+      <small>&copy; 2025 EducaCash Kids</small>
+    </div>
+  </aside>
+
+  <div id="profile-popup" class="popup" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="profile-title">
+    <div class="popup-card" role="document">
+      <button id="close-popup" class="popup-close" aria-label="Fechar perfil" type="button"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+      <img src="images/perfilla.PNG" alt="Avatar do aluno" class="popup-avatar">
+      <h2 id="profile-title" class="popup-name">@LaraSilva3</h2>
+      <p class="popup-role">Aluno Exemplar • Nível 2</p>
+
+      <div class="profile-stats">
+        <div>
+          <strong>4</strong>
+          <span>Estrelas</span>
+        </div>
+        <div>
+          <strong>12</strong>
+          <span>Atividades</span>
+        </div>
+      </div>
+
+      <div class="popup-actions">
+        <a href="profile.html" class="btn primary">Ver Perfil</a>
+        <a href="educash.html" class="btn">Entrar / Cadastrar</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="home">
+    <div class="blob" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="hero-kicker">
+        <span class="tag"><i class="fa-solid fa-coins"></i> Aprendizado lúdico</span>
+        <span class="tag"><i class="fa-solid fa-piggy-bank"></i> Para 6–24 anos</span>
+      </div>
+      <h1 class="hero-title title">Educação financeira divertida — do cofrinho aos primeiros investimentos</h1>
+      <p class="hero-sub">Conteúdos, jogos e atividades para crianças e adolescentes aprenderem a poupar, planejar e sonhar grande.</p>
+      <div class="hero-cta">
+        <a href="#cursos" class="btn"><i class="fa-solid fa-graduation-cap"></i> Ver cursos</a>
+        <a href="tel:+55555555555" class="btn" style="background:var(--green-3)"><i class="fa-solid fa-phone"></i> Fale com a gente</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="main" role="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <h1 id="hero-title">Aprender sobre dinheiro é uma aventura!</h1>
+      <p>Jogos, atividades e módulos fáceis — feitos para crianças.</p>
+    </section>
+
+    <section class="modules" aria-labelledby="modules-title">
+      <h2 id="modules-title" class="section-title">Módulos</h2>
+
+      <div class="grid">
+
+        <a class="module-card" href="modules/module1.html" aria-label="Abrir Módulo 1">
+          <div class="module-header">
+            <img src="images/professor.png" alt="Professor Poupinho" class="tutor-img">
+            <div>
+              <h3>Professor Poupinho</h3>
+              <small>Módulo 1</small>
+            </div>
+          </div>
+
+          <div class="module-thumb">
+            <img src="images/modulo1.png" alt="Miniatura do módulo 1">
+            <span class="badge">4 atividades</span>
+          </div>
+
+          <h4 class="module-title">O que é dinheiro?</h4>
+          <div class="module-footer">
+            <span class="btn small" aria-hidden="true">Ver módulo</span>
+            <div class="progress" aria-hidden="true">
+              <div class="progress-bar" style="width: 25%"></div>
+            </div>
+          </div>
+        </a>
+
+        <a class="module-card" href="modules/module2/index.html" aria-label="Abrir Módulo 2">
+          <div class="module-header">
+            <img src="images/professor.png" alt="Professor Poupinho" class="tutor-img">
+            <div>
+              <h3>Professor Poupinho</h3>
+              <small>Módulo 2</small>
+            </div>
+          </div>
+
+          <div class="module-thumb">
+            <img src="images/modulo2.png" alt="Miniatura do módulo 2">
+            <span class="badge">4 atividades</span>
+          </div>
+
+          <h4 class="module-title">Meu cofrinho</h4>
+          <div class="module-footer">
+            <span class="btn small" aria-hidden="true">Ver módulo</span>
+            <div class="progress" aria-hidden="true">
+              <div class="progress-bar" style="width: 50%"></div>
+            </div>
+          </div>
+        </a>
+
+        <a class="module-card" href="modules/module3/index.html" aria-label="Abrir Módulo 3">
+          <div class="module-header">
+            <img src="images/professor.png" alt="Professor Poupinho" class="tutor-img">
+            <div>
+              <h3>Professor Poupinho</h3>
+              <small>Módulo 3</small>
+            </div>
+          </div>
+
+          <div class="module-thumb">
+            <img src="images/modulo3.png" alt="Miniatura do módulo 3">
+            <span class="badge">4 atividades</span>
+          </div>
+
+          <h4 class="module-title">Quanto custa?</h4>
+          <div class="module-footer">
+            <span class="btn small" aria-hidden="true">Ver módulo</span>
+            <div class="progress" aria-hidden="true">
+              <div class="progress-bar" style="width: 10%"></div>
+            </div>
+          </div>
+        </a>
+
+        <a class="module-card" href="modules/module4/index.html" aria-label="Abrir Módulo 4">
+          <div class="module-header">
+            <img src="images/professor.png" alt="Professor Poupinho" class="tutor-img">
+            <div>
+              <h3>Professor Poupinho</h3>
+              <small>Módulo 4</small>
+            </div>
+          </div>
+
+          <div class="module-thumb">
+            <img src="images/modulo4.png" alt="Miniatura do módulo 4">
+            <span class="badge">4 atividades</span>
+          </div>
+
+          <h4 class="module-title">Ganhando meu dinheiro</h4>
+          <div class="module-footer">
+            <span class="btn small" aria-hidden="true">Ver módulo</span>
+            <div class="progress" aria-hidden="true">
+              <div class="progress-bar" style="width: 0%"></div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <small>EducaCash Kids • Educação Financeira para Crianças</small>
+  </footer>
+
+  <script src="js/homepage.js"></script>
+</body>
+</html>

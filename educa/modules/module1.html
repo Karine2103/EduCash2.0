@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Módulo 1 - O que é dinheiro?</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/homepage.css">
+  <link rel="stylesheet" href="../css/modulo.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../home.html"><img src="../images/logo.png" class="logo" alt="EducaCash"></a>
+    <h1>Módulo 1: O que é dinheiro?</h1>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar" id="module-progress" style="width: 0%"></div>
+  </div>
+</header>
+
+<main class="main">
+  <section class="activity-wrap">
+    <h2>Escolha uma atividade</h2>
+    <div class="atividades">
+      <button class="atividade-btn" data-activity="1">Atividade 1: História do Dinheiro</button>
+      <button class="atividade-btn" data-activity="2">Atividade 2: Tipos de Moeda</button>
+      <button class="atividade-btn" data-activity="3">Atividade 3: Perguntas rápidas</button>
+      <button class="atividade-btn" data-activity="4">Atividade 4: Cofrinho Game</button>
+    </div>
+  </section>
+</main>
+
+<div class="modal" id="modal-activity">
+  <div class="modal-content">
+    <button class="close">&times;</button>
+    <div id="activity-content"></div>
+    <button class="btn-completar" id="complete-btn">Concluir Atividade</button>
+  </div>
+</div>
+
+<script src="../js/module1.js"></script>
+</body>
+</html>

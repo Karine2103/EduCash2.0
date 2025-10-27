@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>EducaCash - Login</title>
+    <link rel="stylesheet" href="css/educalogin.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/educalogin.css">
+  
+</head>
+<body>
+   <header class="header"></header>
+
+   <div class="background"></div>
+
+   <div class="container">
+        <div class="item">
+            <h2 class="logo"><i class='bx bxl-xing'></i> EducaCash</h2>
+            <div class="text-item">
+                <h2>Boas vindas <br><span>ao nosso site!</span></h2>
+                <p>Quer aprender ou ensinar educação financeira? Aqui é o lugar perfeito pra você!</p>
+                <div class="social-icon">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-youtube'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="login-section">
+            <!-- Login -->
+            <div class="form-box login active">
+                <form action="http://localhost/educa2/educa/bd/login.php" method="POST" id="login-form">
+                    <h2>Entrar</h2>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-envelope'></i></span>
+                        <input type="text" name="username" required>
+                        <label>Usuário</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+                        <input type="password" name="password" required>
+                        <label>Senha</label>
+                    </div>
+                    <div class="remember-password">
+                        <label><input type="checkbox" name="remember"> Lembre-me</label>
+                        <a href="#">Esqueceu a senha?</a>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                    <div class="create-account">
+                        <p>Não possui uma conta? <a href="#" class="register-link">Inscreva-se já</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Register -->
+            <!-- Register -->
+<div class="form-box register">
+    <form action="http://localhost/educa2/educa/bd/register.php" method="POST" id="register-form">
+        <h2>Inscreva-se</h2>
+        <div class="input-box">
+            <span class="icon"><i class='bx bxs-user'></i></span>
+            <input type="text" name="username" required>
+            <label>Usuário</label>  
+        </div>
+        <div class="input-box">
+            <span class="icon"><i class='bx bxs-envelope'></i></span>
+            <input type="email" name="email" required>
+            <label>Email</label>
+        </div>
+        <div class="input-box">
+            <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+            <input type="password" name="password" required>
+            <label>Senha</label>
+        </div>
+        
+        <!-- Nova seção: Tipo de conta -->
+        <div class="account-type">
+            <h3>Essa conta é para você ou para seu filho?</h3>
+            <div class="type-options">
+                <div class="type-option" data-value="self">
+                    <i class='bx bxs-user'></i>
+                    <span>Para mim</span>
+                </div>
+                <div class="type-option" data-value="child">
+                    <i class='bx bxs-child'></i>
+                    <span>Para meu filho</span>
+                </div>
+            </div>
+            <input type="hidden" name="account_type" id="account-type" required>
+        </div>
+        
+        <!-- Campo de data de nascimento -->
+        <div class="input-box birthdate-field" id="birthdate-field">
+            <span class="icon"><i class='bx bxs-cake'></i></span>
+            <input type="date" name="birthdate" id="birthdate" required>
+            <label>Data de nascimento</label>
+        </div>
+        <input type="hidden" name="age" id="user-age">
+        
+        <div class="remember-password">
+            <label><input type="checkbox" required id="terms-checkbox"> Eu li e concordo com os termos.</label>
+        </div>
+        <button type="submit" class="btn" id="register-btn">Cadastrar</button>
+        <div class="create-account">
+            <p>Já possui uma conta? <a href="#" class="login-link">Entrar</a></p>
+        </div>
+    </form>
+</div>
+        </div>
+    </div>
+
+   <script src="js/educalogin.js"></script>
+   <script>
+        // Script para gerenciar a seleção do tipo de conta e validação de idade
+        document.addEventListener('DOMContentLoaded', function() {
+            // Elementos do DOM
+            const typeOptions = document.querySelectorAll('.type-option');
+            const accountTypeInput = document.getElementById('account-type');
+            const birthdateField = document.getElementById('birthdate-field');
+            const birthdateInput = document.getElementById('birthdate');
+            const registerForm = document.getElementById('register-form');
+            const termsCheckbox = document.getElementById('terms-checkbox');
+            const registerBtn = document.getElementById('register-btn');
+            
+            // Variável para armazenar o tipo de conta selecionado
+            let selectedAccountType = '';
+            
+            // Adicionar event listeners para as opções de tipo de conta
+            typeOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    // Remover a classe 'selected' de todas as opções
+                    typeOptions.forEach(opt => opt.classList.remove('selected'));
+                    
+                    // Adicionar a classe 'selected' à opção clicada
+                    this.classList.add('selected');
+                    
+                    // Armazenar o valor selecionado
+                    selectedAccountType = this.getAttribute('data-value');
+                    accountTypeInput.value = selectedAccountType;
+                    
+                    // Mostrar o campo de data de nascimento
+                    birthdateField.classList.add('active');
+                    
+                    // Validar se o formulário pode ser enviado
+                    validateForm();
+                });
+            });
+            
+            // Validar formulário quando a data de nascimento for alterada
+            birthdateInput.addEventListener('change', function() {
+                validateForm();
+            });
+            
+            // Validar formulário quando os termos forem aceitos/recusados
+            termsCheckbox.addEventListener('change', function() {
+                validateForm();
+            });
+            
+            // Função para validar o formulário
+            function validateForm() {
+                const birthdate = birthdateInput.value;
+                const termsAccepted = termsCheckbox.checked;
+                
+                // Verificar se todos os campos necessários estão preenchidos
+                if (selectedAccountType && birthdate && termsAccepted) {
+                    registerBtn.disabled = false;
+                    registerBtn.style.opacity = '1';
+                    registerBtn.style.cursor = 'pointer';
+                } else {
+                    registerBtn.disabled = true;
+                    registerBtn.style.opacity = '0.7';
+                    registerBtn.style.cursor = 'not-allowed';
+                }
+            }
+            
+            // Inicialmente desabilitar o botão de registro
+            registerBtn.disabled = true;
+            registerBtn.style.opacity = '0.7';
+            registerBtn.style.cursor = 'not-allowed';
+            
+            // Adicionar validação extra antes do envio do formulário
+            registerForm.addEventListener('submit', function(e) {
+                // Verificar se a data de nascimento foi preenchida
+                if (!birthdateInput.value) {
+                    e.preventDefault();
+                    alert('Por favor, preencha a data de nascimento.');
+                    return;
+                }
+                
+                // Calcular a idade do usuário
+                const birthdate = new Date(birthdateInput.value);
+                const today = new Date();
+                let age = today.getFullYear() - birthdate.getFullYear();
+                const monthDiff = today.getMonth() - birthdate.getMonth();
+                
+                if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthdate.getDate())) {
+                    age--;
+                }
+                
+                // Armazenar a idade em um campo oculto para envio ao servidor
+                let ageField = document.getElementById('user-age');
+                if (!ageField) {
+                    ageField = document.createElement('input');
+                    ageField.type = 'hidden';
+                    ageField.name = 'age';
+                    ageField.id = 'user-age';
+                    registerForm.appendChild(ageField);
+                }
+                ageField.value = age;
+                
+                // Não é necessário redirecionar aqui, pois o servidor fará isso
+                // baseado na idade armazenada no banco de dados
+            });
+        });
+        // Script para gerenciar a seleção do tipo de conta e validação de idade
+document.addEventListener('DOMContentLoaded', function() {
+    // Elementos do DOM
+    const typeOptions = document.querySelectorAll('.type-option');
+    const accountTypeInput = document.getElementById('account-type');
+    const birthdateField = document.getElementById('birthdate-field');
+    const birthdateInput = document.getElementById('birthdate');
+    const ageInput = document.getElementById('user-age');
+    const registerForm = document.getElementById('register-form');
+    const termsCheckbox = document.getElementById('terms-checkbox');
+    const registerBtn = document.getElementById('register-btn');
+    
+    // Variável para armazenar o tipo de conta selecionado
+    let selectedAccountType = '';
+    
+    // Adicionar event listeners para as opções de tipo de conta
+    typeOptions.forEach(option => {
+        option.addEventListener('click', function() {
+            // Remover a classe 'selected' de todas as opções
+            typeOptions.forEach(opt => opt.classList.remove('selected'));
+            
+            // Adicionar a classe 'selected' à opção clicada
+            this.classList.add('selected');
+            
+            // Armazenar o valor selecionado
+            selectedAccountType = this.getAttribute('data-value');
+            accountTypeInput.value = selectedAccountType;
+            
+            // Mostrar o campo de data de nascimento
+            birthdateField.classList.add('active');
+            
+            // Validar se o formulário pode ser enviado
+            validateForm();
+        });
+    });
+    
+    // Validar formulário quando a data de nascimento for alterada
+    birthdateInput.addEventListener('change', function() {
+        // Calcular a idade
+        const birthdate = new Date(this.value);
+        const today = new Date();
+        let age = today.getFullYear() - birthdate.getFullYear();
+        const monthDiff = today.getMonth() - birthdate.getMonth();
+        
+        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthdate.getDate())) {
+            age--;
+        }
+        
+        // Armazenar a idade no campo oculto
+        ageInput.value = age;
+        
+        validateForm();
+    });
+    
+    // Validar formulário quando os termos forem aceitos/recusados
+    termsCheckbox.addEventListener('change', function() {
+        validateForm();
+    });
+    
+    // Função para validar o formulário
+    function validateForm() {
+        const birthdate = birthdateInput.value;
+        const termsAccepted = termsCheckbox.checked;
+        
+        // Verificar se todos os campos necessários estão preenchidos
+        if (selectedAccountType && birthdate && termsAccepted) {
+            registerBtn.disabled = false;
+            registerBtn.style.opacity = '1';
+            registerBtn.style.cursor = 'pointer';
+        } else {
+            registerBtn.disabled = true;
+            registerBtn.style.opacity = '0.7';
+            registerBtn.style.cursor = 'not-allowed';
+        }
+    }
+    
+    // Inicialmente desabilitar o botão de registro
+    registerBtn.disabled = true;
+    registerBtn.style.opacity = '0.7';
+    registerBtn.style.cursor = 'not-allowed';
+});
+   </script>
+</body>
+</html>

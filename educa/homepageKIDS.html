@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EducaCash - KIDS</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilo principal -->
+  <link rel="stylesheet" href="css/homepageKIDS.css">
+
+  <!-- Ícones (FontAwesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- HEADER COM NOVO ESTILO -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <button id="menu-btn" class="icon-btn" aria-label="Abrir menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <a class="brand" href="home.html" aria-label="EducaCash home">
+        <i class="fa-solid fa-piggy-bank"></i>
+        EducaCash
+      </a>
+
+      <div class="search-wrap" aria-hidden="false">
+        <input id="search" type="search" placeholder="Buscar módulos..." aria-label="Pesquisar módulos">
+        <button class="icon-btn" aria-label="Pesquisar">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+
+      <div class="header-actions">
+        <button id="user-btn" class="avatar-btn" aria-haspopup="dialog" aria-controls="profile-popup">
+          <img src="images/perfilla.PNG" alt="Perfil" class="avatar">
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- SIDEBAR (mantido igual) -->
+  <aside id="side" class="side-panel" aria-hidden="true">
+    <button id="close-side" class="close-side" aria-label="Fechar menu"><i class="fa-solid fa-xmark"></i></button>
+
+    <nav class="kid-nav" role="navigation" aria-label="Navegação principal">
+      <a href="home.html"><i class="fa-solid fa-house"></i><span>Início</span></a>
+      <a href="about.html"><i class="fa-solid fa-book"></i><span>Sobre</span></a>
+      <a href="courses.html"><i class="fa-solid fa-puzzle-piece"></i><span>Módulos</span></a>
+      <a href="contact.html"><i class="fa-solid fa-headset"></i><span>Fale Conosco</span></a>
+    </nav>
+
+    <div class="side-footer">
+      <small>&copy; 2025 EducaCash Kids</small>
+    </div>
+  </aside>
+
+  <!-- POPUP DE PERFIL (mantido igual) -->
+  <div id="profile-popup" class="popup" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="profile-title">
+    <div class="popup-card">
+      <button id="close-popup" class="popup-close" aria-label="Fechar perfil"><i class="fa-solid fa-xmark"></i></button>
+      <img src="images/perfilla.PNG" alt="Avatar do aluno" class="popup-avatar">
+      <h2 id="profile-title" class="popup-name">@LaraSilva3</h2>
+      <p class="popup-role">Aluno Exemplar • Nível 2</p>
+
+      <div class="profile-stats">
+        <div>
+          <strong>4</strong>
+          <span>Estrelas</span>
+        </div>
+        <div>
+          <strong>12</strong>
+          <span>Atividades</span>
+        </div>
+        <div>
+          <strong>R$0,00</strong>
+          <span>Saldo (jogo)</span>
+        </div>
+      </div>
+
+      <div class="popup-actions">
+        <a href="profile.html" class="btn primary">Ver Perfil</a>
+        <a href="educash.html" class="btn">Entrar / Cadastrar</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTEÚDO PRINCIPAL COM NOVA HERO SECTION -->
+  <main class="main" role="main">
+    
+    <!-- HERO SECTION COM IMAGEM -->
+    <section class="hero">
+      <div class="blob" aria-hidden="true"></div>
+      <div class="hero-content">
+        <h1>Aprender sobre dinheiro é uma aventura!</h1>
+        <p>Jogos, atividades e módulos fáceis — feitos para crianças.</p>
+      </div>
+    </section>
+
+    <!-- MODULES SECTION (mantido igual) -->
+    <section class="modules">
+      <h2 class="section-title">Módulos</h2>
+
+      <div class="grid">
+        <!-- Módulo 1 -->
+        <article class="module-card">
+          <div class="module-header">
+            <img src="images/professor.png" alt="Professor Poupinho" class="tutor-img">
+            <div>
+              <h3>Professor Poupinho</h3>
+              <small>Módulo 1</small>
+            </div>
+          </div>
+
+          <div class="module-thumb">
+            <img src="images/modulo1.png" alt="Miniatura do módulo 1">
+            <span class="badge">4 atividades</span>
+          </div>
+
+          <h4 class="module-title">O que é dinheiro?</h4>
+          <div class="module-footer">
+            <a href="playlist.html" class="btn small primary">Ver módulo</a>
+            <div class="progress" aria-hidden="true">
+              <div class="progress-bar" style="width: 25%"></div>
+            </div>
+          </div>
+        </article>
+       <!-- Módulo 2 -->
+       <article class="module-card">
+        <div class="module-header">
+          <img src="images/professor.png" alt="Professor Poupinho" class="tutor-img">
+          <div>
+            <h3>Professor Poupinho</h3>
+            <small>Módulo 2</small>
+          </div>
+        </div>
+
+        <div class="module-thumb">
+          <img src="images/modulo2.png" alt="Miniatura do módulo 2">
+          <span class="badge">4 atividades</span>
+        </div>
+
+        <h4 class="module-title">Meu cofrinho</h4>
+        <div class="module-footer">
+          <a href="playlist.html" class="btn small primary">Ver módulo</a>
+          <div class="progress" aria-hidden="true">
+            <div class="progress-bar" style="width: 50%"></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Módulo 3 -->
+      <article class="module-card">
+        <div class="module-header">
+          <img src="images/professor.png" alt="Professor Poupinho" class="tutor-img">
+          <div>
+            <h3>Professor Poupinho</h3>
+            <small>Módulo 3</small>
+          </div>
+        </div>
+
+        <div class="module-thumb">
+          <img src="images/modulo3.png" alt="Miniatura do módulo 3">
+          <span class="badge">4 atividades</span>
+        </div>
+
+        <h4 class="module-title">Quanto custa?</h4>
+        <div class="module-footer">
+          <a href="playlist.html" class="btn small primary">Ver módulo</a>
+          <div class="progress" aria-hidden="true">
+            <div class="progress-bar" style="width: 10%"></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Módulo 4 -->
+      <article class="module-card">
+        <div class="module-header">
+          <img src="images/professor.png" alt="Professor Poupinho" class="tutor-img">
+          <div>
+            <h3>Professor Poupinho</h3>
+            <small>Módulo 4</small>
+          </div>
+        </div>
+
+        <div class="module-thumb">
+          <img src="images/modulo4.png" alt="Miniatura do módulo 4">
+          <span class="badge">4 atividades</span>
+        </div>
+
+        <h4 class="module-title">Ganhando meu dinheiro</h4>
+        <div class="module-footer">
+          <a href="playlist.html" class="btn small primary">Ver módulo</a>
+          <div class="progress" aria-hidden="true">
+            <div class="progress-bar" style="width: 0%"></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+  <!--footer-->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-brand">
+            <i class="fa-solid fa-piggy-bank"></i>
+            <span>EducaCash</span>
+          </div>
+          <p class="footer-description">
+            Educação financeira para sua independência. 
+            Ferramentas e conteúdos para você tomar controle da sua vida financeira.
+          </p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Produtos</h3>
+          <ul class="footer-links">
+            <li><a href="#">Planilhas Financeiras</a></li>
+            <li><a href="#">Cofrinhos Digitais</a></li>
+            <li><a href="#">Conteúdo Educativo</a></li>
+            <li><a href="#">Relatórios Personalizados</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Recursos</h3>
+          <ul class="footer-links">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Tutoriais</a></li>
+            <li><a href="#">Perguntas Frequentes</a></li>
+            <li><a href="#">Suporte</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Legal</h3>
+          <ul class="footer-links">
+            <li><a href="#">Termos de Uso</a></li>
+            <li><a href="#">Política de Privacidade</a></li>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">Acessibilidade</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Contato</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-envelope"></i> contato@educacash.com</li>
+            <li><i class="fas fa-phone"></i> (11) 99999-9999</li>
+            <li><i class="fas fa-map-marker-alt"></i> São Paulo, Brasil</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>&copy; 2025 EducaCash. Todos os direitos reservados.</p>
+          <div class="footer-badges">
+            <span class="badge">✓ 100% Seguro</span>
+            <span class="badge">✓ SSL Protegido</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script src="js/homepage.js"></script>
+</body>
+</html>

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EducaCash</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="css/homepageDEFAULT.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <button id="menu-btn" class="icon-btn" aria-label="Abrir menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <a class="brand" href="homepage.html" aria-label="EducaCash home">
+        <i class="fa-solid fa-piggy-bank"></i>
+        EducaCash
+      </a>
+
+      <div class="search-wrap" aria-hidden="false">
+        <input id="search" type="search" placeholder="Buscar módulos..." aria-label="Pesquisar módulos">
+        <button class="icon-btn" aria-label="Pesquisar">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+
+      <div class="header-actions">
+        <button id="user-btn" class="avatar-btn" aria-haspopup="dialog" aria-controls="profile-popup">
+          <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80" alt="Perfil" class="avatar">
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="main" role="main">
+    
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="blob" aria-hidden="true"></div>
+      <div class="hero-content">
+        <h1>Controle suas finanças com inteligência</h1>
+        <p>Planejamento financeiro, investimentos e educação para sua independência.</p>
+      </div>
+    </section>
+
+    <!-- PLANILHAS SECTION -->
+    <section class="planilhas">
+      <h2 class="section-title">Planilhas Financeiras</h2>
+
+      <div class="planilhas-grid" id="planilhas-grid">
+        <!-- Planilhas serão carregadas dinamicamente aqui -->
+      </div>
+
+      <div class="add-planilha-btn" id="add-planilha-btn">
+        <i class="fa-solid fa-plus"></i>
+        <span>Nova Planilha</span>
+      </div>
+    </section>
+
+    <!-- COFRINHO SECTION -->
+    <section class="cofrinho">
+      <h2 class="section-title">Cofrinhos</h2>
+
+      <div class="cofrinhos-grid" id="cofrinhos-grid">
+        <!-- Cofrinhos serão carregados dinamicamente aqui -->
+      </div>
+
+      <div class="add-cofrinho-btn" id="add-cofrinho-btn">
+        <i class="fa-solid fa-plus"></i>
+        <span>Novo Cofrinho</span>
+      </div>
+    </section>
+
+    <!-- VIDEOS SECTION -->
+    <section class="videos">
+      <h2 class="section-title">Área Educa</h2>
+
+      <div class="grid">
+        <!-- Vídeo 1 -->
+        <article class="video-card">
+          <div class="video-thumb">
+            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=500&q=80" alt="Investimentos para iniciantes">
+            <div class="video-play">
+              <i class="fa-solid fa-play"></i>
+            </div>
+          </div>
+          <h3 class="video-title">INVESTIMENTOS PARA INICIANTES</h3>
+          <p class="video-desc">Aprenda os primeiros passos para começar a investir com segurança.</p>
+          <div class="video-footer">
+            <a href="#" class="btn small primary">Assistir vídeo</a>
+            <span class="video-duration">18:22</span>
+          </div>
+        </article>
+
+        <!-- Vídeo 2 -->
+        <article class="video-card">
+          <div class="video-thumb">
+            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=500&q=80" alt="Planejamento financeiro">
+            <div class="video-play">
+              <i class="fa-solid fa-play"></i>
+            </div>
+          </div>
+          <h3 class="video-title">PLANEJAMENTO FINANCEIRO PESSOAL</h3>
+          <p class="video-desc">Como criar um plano financeiro eficiente para alcançar seus objetivos.</p>
+          <div class="video-footer">
+            <a href="#" class="btn small primary">Assistir vídeo</a>
+            <span class="video-duration">22:15</span>
+          </div>
+        </article>
+
+        <!-- Vídeo 3 -->
+        <article class="video-card">
+          <div class="video-thumb">
+            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=500&q=80" alt="Economizar dinheiro">
+            <div class="video-play">
+              <i class="fa-solid fa-play"></i>
+            </div>
+          </div>
+          <h3 class="video-title">COMO ECONOMIZAR DINHEIRO TODO MÊS</h3>
+          <p class="video-desc">Estratégias práticas para reduzir gastos e aumentar sua poupança.</p>
+          <div class="video-footer">
+            <a href="#" class="btn small primary">Assistir vídeo</a>
+            <span class="video-duration">15:30</span>
+          </div>
+        </article>
+
+        <!-- Vídeo 4 -->
+        <article class="video-card">
+          <div class="video-thumb">
+            <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=500&q=80" alt="Aposentadoria">
+            <div class="video-play">
+              <i class="fa-solid fa-play"></i>
+            </div>
+          </div>
+          <h3 class="video-title">PLANEJANDO SUA APOSENTADORIA</h3>
+          <p class="video-desc">Como se preparar financeiramente para uma aposentadoria tranquila.</p>
+          <div class="video-footer">
+            <a href="#" class="btn small primary">Assistir vídeo</a>
+            <span class="video-duration">25:45</span>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODAL PARA CRIAR PLANILHA -->
+  <div class="modal" id="create-planilha-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Nova Planilha Financeira</h3>
+        <button class="close-modal" id="close-create-planilha-modal">&times;</button>
+      </div>
+      <form id="create-planilha-form">
+        <div class="form-group">
+          <label for="planilha-name">Nome da Planilha</label>
+          <input type="text" id="planilha-name" class="form-control" placeholder="Ex: Orçamento Familiar" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="monthly-income">Renda Mensal (R$)</label>
+          <input type="number" id="monthly-income" class="form-control" placeholder="0,00" step="0.01" required>
+        </div>
+        
+        <div class="form-actions">
+          <button type="button" class="btn" id="cancel-create-planilha">Cancelar</button>
+          <button type="submit" class="btn primary">Criar Planilha</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL PARA VER/EDITAR PLANILHA -->
+  <div class="modal planilha-detail-modal" id="planilha-detail-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Detalhes da Planilha</h3>
+        <button class="close-modal" id="close-planilha-detail-modal">&times;</button>
+      </div>
+      
+      <div class="planilha-detail-header">
+        <div class="planilha-detail-icon">
+          <i class="fa-solid fa-chart-pie"></i>
+        </div>
+        <div class="planilha-detail-info">
+          <h4 class="planilha-detail-name" id="detail-planilha-name">Planilha</h4>
+          <p class="planilha-detail-meta" id="detail-planilha-meta">Criada em 15/08/2023</p>
+        </div>
+      </div>
+      
+      <div class="financial-summary">
+        <div class="summary-card">
+          <div class="summary-value" id="summary-income">R$ 0,00</div>
+          <div class="summary-label">Renda Mensal</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-value" id="summary-expenses">R$ 0,00</div>
+          <div class="summary-label">Total de Despesas</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-value" id="summary-balance">R$ 0,00</div>
+          <div class="summary-label">Saldo</div>
+        </div>
+      </div>
+      
+      <div class="chart-container">
+        <canvas id="expenses-chart"></canvas>
+      </div>
+      
+      <div class="add-despesa-form">
+        <form id="add-despesa-form">
+          <div class="form-group">
+            <label for="despesa-name">Nome da Despesa</label>
+            <input type="text" id="despesa-name" class="form-control" placeholder="Ex: Aluguel" required>
+          </div>
+          <div class="form-group">
+            <label for="despesa-amount">Valor (R$)</label>
+            <input type="number" id="despesa-amount" class="form-control" placeholder="0,00" step="0.01" required>
+          </div>
+          <button type="submit" class="btn primary full">Adicionar Despesa</button>
+        </form>
+      </div>
+      
+      <h4>Despesas Cadastradas</h4>
+      <div class="despesas-list" id="despesas-list">
+        <!-- Despesas serão carregadas aqui -->
+      </div>
+      
+      <div class="financial-advice" id="financial-advice">
+        <h4 class="advice-title">Recomendações Financeiras</h4>
+        <div class="advice-content" id="advice-content">
+          <!-- Conselhos financeiros serão carregados aqui -->
+        </div>
+      </div>
+      
+      <div class="form-actions">
+        <button class="btn" id="edit-planilha-btn">Editar Planilha</button>
+        <button class="btn" id="delete-planilha-btn">Excluir Planilha</button>
+      </div>
+    </div>
+  </div>
+  <!-- MODAL PARA EDITAR PLANILHA -->
+<div class="modal" id="edit-planilha-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Editar Planilha Financeira</h3>
+        <button class="close-modal" id="close-edit-planilha-modal">&times;</button>
+      </div>
+      <form id="edit-planilha-form">
+        <div class="form-group">
+          <label for="edit-planilha-name">Nome da Planilha</label>
+          <input type="text" id="edit-planilha-name" class="form-control" placeholder="Ex: Orçamento Familiar" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="edit-monthly-income">Renda Mensal (R$)</label>
+          <input type="number" id="edit-monthly-income" class="form-control" placeholder="0,00" step="0.01" required>
+        </div>
+        
+        <div class="form-group">
+          <label>Cor da Planilha</label>
+          <div class="color-palette" id="color-palette">
+            <!-- As opções de cor serão inseridas aqui via JavaScript -->
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label>Ícone da Planilha</label>
+          <div class="icon-grid" id="icon-grid">
+            <!-- As opções de ícone serão inseridas aqui via JavaScript -->
+          </div>
+        </div>
+        
+        <div class="form-actions">
+          <button type="button" class="btn" id="cancel-edit-planilha">Cancelar</button>
+          <button type="submit" class="btn primary">Salvar Alterações</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL PARA CRIAR COFRINHO -->
+  <div class="modal" id="create-cofrinho-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Criar Cofrinho</h3>
+        <button class="close-modal" id="close-create-cofrinho-modal">&times;</button>
+      </div>
+      <form id="create-cofrinho-form">
+        <div class="form-group">
+          <label for="cofrinho-name">Nome do Cofrinho</label>
+          <input type="text" id="cofrinho-name" class="form-control" placeholder="Ex: Viagem dos Sonhos" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="cofrinho-goal">Meta (R$)</label>
+          <input type="number" id="cofrinho-goal" class="form-control" placeholder="0,00" step="0.01">
+        </div>
+        
+        <div class="form-actions">
+          <button type="button" class="btn" id="cancel-create-cofrinho">Cancelar</button>
+          <button type="submit" class="btn primary">Criar Cofrinho</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL PARA VER/EDITAR COFRINHO -->
+  <div class="modal cofrinho-detail-modal" id="cofrinho-detail-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Detalhes do Cofrinho</h3>
+        <button class="close-modal" id="close-cofrinho-detail-modal">&times;</button>
+      </div>
+      
+      <div class="cofrinho-detail-header">
+        <div class="cofrinho-detail-icon" id="detail-cofrinho-icon">
+          <i class="fa-solid fa-piggy-bank"></i>
+        </div>
+        <div class="cofrinho-detail-info">
+          <h4 class="cofrinho-detail-name" id="detail-cofrinho-name">Cofrinho</h4>
+          <p class="cofrinho-detail-meta" id="detail-cofrinho-meta">Criado em 15/08/2023</p>
+        </div>
+      </div>
+      
+      <div class="cofrinho-detail-amount" id="detail-cofrinho-amount">R$ 0,00</div>
+      
+      <div class="cofrinho-detail-progress" id="detail-cofrinho-progress">
+        <div class="cofrinho-detail-progress-bar" id="detail-cofrinho-progress-bar"></div>
+      </div>
+      
+      <div class="cofrinho-detail-goal" id="detail-cofrinho-goal">Meta: R$ 0,00</div>
+      
+      <div class="add-deposit-form">
+        <form id="add-deposit-form">
+          <div class="form-group">
+            <label for="deposit-amount">Adicionar valor (R$)</label>
+            <input type="number" id="deposit-amount" class="form-control" placeholder="0,00" step="0.01" required>
+          </div>
+          <button type="submit" class="btn primary full">Adicionar</button>
+        </form>
+      </div>
+      
+      <h4>Histórico de Depósitos</h4>
+      <div class="deposits-list" id="deposits-list">
+        <!-- Depósitos serão carregados aqui -->
+      </div>
+      
+      <div class="form-actions">
+        <button class="btn" id="edit-cofrinho-btn">Editar Cofrinho</button>
+        <button class="btn" id="delete-cofrinho-btn">Excluir Cofrinho</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- RODAPÉ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-brand">
+            <i class="fa-solid fa-piggy-bank"></i>
+            <span>EducaCash</span>
+          </div>
+          <p class="footer-description">
+            Educação financeira para sua independência. 
+            Ferramentas e conteúdos para você tomar controle da sua vida financeira.
+          </p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Produtos</h3>
+          <ul class="footer-links">
+            <li><a href="#">Planilhas Financeiras</a></li>
+            <li><a href="#">Cofrinhos Digitais</a></li>
+            <li><a href="#">Conteúdo Educativo</a></li>
+            <li><a href="#">Relatórios Personalizados</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Recursos</h3>
+          <ul class="footer-links">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Tutoriais</a></li>
+            <li><a href="#">Perguntas Frequentes</a></li>
+            <li><a href="#">Suporte</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Legal</h3>
+          <ul class="footer-links">
+            <li><a href="#">Termos de Uso</a></li>
+            <li><a href="#">Política de Privacidade</a></li>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">Acessibilidade</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Contato</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-envelope"></i> contato@educacash.com</li>
+            <li><i class="fas fa-phone"></i> (11) 99999-9999</li>
+            <li><i class="fas fa-map-marker-alt"></i> São Paulo, Brasil</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>&copy; 2025 EducaCash. Todos os direitos reservados.</p>
+          <div class="footer-badges">
+            <span class="badge">✓ 100% Seguro</span>
+            <span class="badge">✓ SSL Protegido</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    
+  </script>
+</body>
+</html>
